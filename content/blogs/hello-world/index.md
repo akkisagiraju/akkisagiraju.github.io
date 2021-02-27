@@ -8,6 +8,6 @@ How are you feeling today?
 
 I am doing great. Are you?
 
-This is going to be my first blog post.
+This is my first blog post.
 
 ## Yay!
