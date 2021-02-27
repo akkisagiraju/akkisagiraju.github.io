@@ -1,34 +1,35 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import { AiFillClockCircle, AiFillCalendar } from 'react-icons/ai';
+import { AiOutlineClockCircle, AiOutlineCalendar } from 'react-icons/ai';
 import Bio from '../components/Bio';
+import Layout from '../components/Layout';
 
 const Home = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <div className="mx-auto p-8 lg:w-1/2">
+    <Layout>
       <Bio />
       <div className="my-12">
         {posts.map((post) => (
           <div key={post.node.id} className="my-8 my-12">
-            <Link to={post.node.fields.slug} className="text-xl font-bold lg:text-2xl">
+            <Link to={post.node.fields.slug} className="text-xl text-gray-900 dark:text-gray-100 font-bold lg:text-2xl">
               {post.node.frontmatter.title}
             </Link>
             <div className="flex justify-between items-center mt-2 lg:justify-start">
-              <p className="flex items-center text-sm text-gray-500 lg:mr-20 lg:text-base">
+              <p className="flex items-center text-sm text-gray-500 dark:text-gray-400 lg:mr-20 lg:text-base">
                 {' '}
-                <AiFillCalendar style={{ marginRight: 4 }} /> {post.node.frontmatter.date}
+                <AiOutlineCalendar style={{ marginRight: 4 }} /> {post.node.frontmatter.date}
               </p>
-              <p className="flex items-center text-sm text-gray-500 lg:text-base">
-                <AiFillClockCircle style={{ marginRight: 4 }} />
+              <p className="flex items-center text-sm text-gray-500 dark:text-gray-400 lg:text-base">
+                <AiOutlineClockCircle style={{ marginRight: 4 }} />
                 {post.node.timeToRead} min read
               </p>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </Layout>
   );
 };
 
