@@ -13,7 +13,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 };
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
   const blogs = await graphql(`
     query {
@@ -30,13 +30,27 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  blogs.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: path.resolve('./src/templates/post.js'),
-      context: {
-        slug: node.fields.slug
-      }
+  if (blogs.errors) {
+    reporter.panicOnBuild(`There was an error loading your blog posts`, blogs.errors);
+    return;
+  }
+
+  const blogPosts = blogs.data.allMarkdownRemark.edges;
+
+  if (blogPosts.length > 0) {
+    blogPosts.forEach(({ node }, index) => {
+      const previousPostId = index === 0 ? null : blogPosts[index - 1].node.id;
+      const nextPostId = index === blogPosts.length - 1 ? null : blogPosts[index + 1].node.id;
+
+      createPage({
+        path: node.fields.slug,
+        component: path.resolve('./src/templates/post.js'),
+        context: {
+          slug: node.fields.slug,
+          previousPostId,
+          nextPostId
+        }
+      });
     });
-  });
+  }
 };

@@ -5,7 +5,8 @@ import Layout from '../components/Layout';
 
 const Post = ({ data }) => {
   const blogPost = data.markdownRemark;
-
+  const { previous, next } = data;
+  
   return (
     <Layout>
       <div className="mb-8 flex justify-between items-center">
@@ -19,9 +20,7 @@ const Post = ({ data }) => {
           Contact
         </a>
       </div>
-      <h1 className="text-3xl font-bold dark:text-gray-100 my-4 lg:text-4xl">
-        {blogPost.frontmatter.title}
-      </h1>
+      <h1 className="text-3xl font-bold dark:text-gray-100 my-4 lg:text-4xl">{blogPost.frontmatter.title}</h1>
       <div className="flex justify-between items-center mt-2 lg:justify-start">
         <p className="flex items-center text-sm text-gray-500 dark:text-gray-400 lg:mr-20 lg:text-base">
           {' '}
@@ -33,6 +32,28 @@ const Post = ({ data }) => {
         </p>
       </div>
       <div className="my-8" dangerouslySetInnerHTML={{ __html: blogPost.html }}></div>
+      <nav className="pt-8 border-t-2 border-gray-200">
+        <ul className="flex flex-wrap justify-between items-center list-none">
+          <li>
+            {previous && (
+              <Link
+                to={previous.fields.slug}
+                className="font-medium text-blue-800 dark:text-blue-500 text-xl"
+                rel="prev"
+              >
+                ← {previous.frontmatter.title}
+              </Link>
+            )}
+          </li>
+          <li>
+              {next && (
+                <Link to={next.fields.slug} className="font-medium text-blue-800 dark:text-blue-500 text-xl" rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              )}
+            </li>
+        </ul>
+      </nav>
     </Layout>
   );
 };
@@ -40,7 +61,7 @@ const Post = ({ data }) => {
 export default Post;
 
 export const pageQuery = graphql`
-  query($slug: String!) {
+  query($slug: String!, $previousPostId: String, $nextPostId: String) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
@@ -48,6 +69,22 @@ export const pageQuery = graphql`
         date
       }
       timeToRead
+    }
+    previous: markdownRemark(id: { eq: $previousPostId }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+      }
+    }
+    next: markdownRemark(id: { eq: $nextPostId }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+      }
     }
   }
 `;
