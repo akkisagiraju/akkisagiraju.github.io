@@ -49,12 +49,13 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://akhilsagiraju.com',
-        policy: [{ userAgent: '*', disallow: ['/'] }]
+        policy: [{ userAgent: '*', allow: '/' }]
       }
     },
     'gatsby-plugin-postcss',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    'gatsby-plugin-react-helmet'
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap'
   ]
 };
