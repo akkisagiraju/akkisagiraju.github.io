@@ -6,7 +6,19 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 
 const Home = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges;
+  const posts = data.allMarkdownRemark.nodes;
+
+  if (!posts.length) {
+    return (
+      <Layout>
+        <Seo title="Home" />
+        <Bio />
+        <div className="my-12">
+          <p className="text-lg text-center text-gray-500 dark:text-gray-400">No blog posts found</p>
+        </div>
+      </Layout>
+    );
+  }
 
   return (
     <Layout>
@@ -14,18 +26,18 @@ const Home = ({ data }) => {
       <Bio />
       <div className="my-12">
         {posts.map((post) => (
-          <div key={post.node.id} className="my-8 my-12">
-            <Link to={post.node.fields.slug} className="text-xl text-gray-900 dark:text-gray-100 font-bold lg:text-2xl">
-              {post.node.frontmatter.title}
+          <div key={post.id} className="my-8 my-12">
+            <Link to={post.fields.slug} className="text-xl text-gray-900 dark:text-gray-100 font-bold lg:text-2xl">
+              {post.frontmatter.title}
             </Link>
             <div className="flex justify-between items-center mt-2 lg:justify-start">
               <p className="flex items-center text-sm text-gray-500 dark:text-gray-400 lg:mr-20 lg:text-base">
                 {' '}
-                <AiOutlineCalendar style={{ marginRight: 4 }} /> {post.node.frontmatter.date}
+                <AiOutlineCalendar style={{ marginRight: 4 }} /> {post.frontmatter.date}
               </p>
               <p className="flex items-center text-sm text-gray-500 dark:text-gray-400 lg:text-base">
                 <AiOutlineClockCircle style={{ marginRight: 4 }} />
-                {post.node.timeToRead} min read
+                {post.timeToRead} min read
               </p>
             </div>
           </div>
@@ -37,19 +49,17 @@ const Home = ({ data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "DD MMM YYYY")
-            title
-          }
-          timeToRead
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      nodes {
+        id
+        fields {
+          slug
         }
+        frontmatter {
+          date(formatString: "DD MMM YYYY")
+          title
+        }
+        timeToRead
       }
       totalCount
     }

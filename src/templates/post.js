@@ -65,8 +65,8 @@ const Post = ({ data }) => {
 export default Post;
 
 export const pageQuery = graphql`
-  query($slug: String!, $previousPostId: String, $nextPostId: String) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+  query($id: String!, $previousPostId: String, $nextPostId: String) {
+    markdownRemark(id: { eq: $id }) {
       html
       excerpt(pruneLength: 160)
       frontmatter {

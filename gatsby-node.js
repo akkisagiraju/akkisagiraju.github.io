@@ -16,14 +16,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
   const blogs = await graphql(`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
-            }
-            id
+    {
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }, limit: 1000) {
+        nodes {
+          id
+          fields {
+            slug
           }
         }
       }
@@ -35,22 +33,52 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return;
   }
 
-  const blogPosts = blogs.data.allMarkdownRemark.edges;
+  const blogPosts = blogs.data.allMarkdownRemark.nodes;
 
   if (blogPosts.length > 0) {
-    blogPosts.forEach(({ node }, index) => {
-      const previousPostId = index === 0 ? null : blogPosts[index - 1].node.id;
-      const nextPostId = index === blogPosts.length - 1 ? null : blogPosts[index + 1].node.id;
+    blogPosts.forEach((blogPost, index) => {
+      const previousPostId = index === 0 ? null : blogPosts[index - 1].id;
+      const nextPostId = index === blogPosts.length - 1 ? null : blogPosts[index + 1].id;
 
       createPage({
-        path: node.fields.slug,
+        path: blogPost.fields.slug,
         component: path.resolve('./src/templates/post.js'),
         context: {
-          slug: node.fields.slug,
+          id: blogPost.id,
           previousPostId,
           nextPostId
         }
       });
     });
   }
+};
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+
+  // Explicitly define the siteMetadata {} object
+  // This way those will always be defined even if removed from gatsby-config.js
+
+  // Also explicitly define the Markdown frontmatter
+  // This way the "MarkdownRemark" queries will return `null` even when no
+  // blog posts are stored inside "content/blog" instead of returning an error
+  createTypes(`
+    type SiteSiteMetadata {
+      title: String
+      description: String
+      siteUrl: String
+    }
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter
+      fields: Fields
+    }
+    type Frontmatter {
+      title: String
+      description: String
+      date: Date @dateformat
+    }
+    type Fields {
+      slug: String
+    }
+  `);
 };
