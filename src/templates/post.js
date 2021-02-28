@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import { AiOutlineClockCircle, AiOutlineCalendar } from 'react-icons/ai';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
+// import PostFooter from '../components/PostFooter';
 
 const Post = ({ data }) => {
   const blogPost = data.markdownRemark;
@@ -34,7 +35,8 @@ const Post = ({ data }) => {
         </p>
       </div>
       <div className="my-8" dangerouslySetInnerHTML={{ __html: blogPost.html }}></div>
-      <nav className="pt-8 border-t-2 border-gray-200">
+      <nav className="pt-8 border-t-2 border-gray-200 dark:border-gray-600">
+        {/* <PostFooter /> */}
         <ul className="flex flex-wrap justify-between items-center list-none">
           <li>
             {previous && (
