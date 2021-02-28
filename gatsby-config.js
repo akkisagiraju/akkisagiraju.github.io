@@ -31,7 +31,7 @@ module.exports = {
                 'heading[depth=1]': 'text-3xl font-bold my-6 lg:text-4xl dark:text-gray-100',
                 'heading[depth=2]': 'text-2xl font-bold my-6 lg:text-3xl dark:text-gray-100',
                 'heading[depth=3]': 'text-xl font-bold my-6 lg:text-2xl dark:text-gray-100',
-                paragraph: 'text-md text-black my-6 lg:text-lg dark:text-gray-200'
+                paragraph: 'text-md my-6 lg:text-lg dark:text-gray-200'
               }
             }
           },
