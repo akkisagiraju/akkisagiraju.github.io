@@ -1,5 +1,9 @@
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: 'Akhil Sagiraju',
+    description: 'Personal blog by Akhil, a front-end developer and a tech enthusiast based in India.',
+    siteUrl: 'https://akhilsagiraju.com'
+  },
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
@@ -41,8 +45,8 @@ module.exports = {
       }
     },
     'gatsby-plugin-postcss',
-
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp'
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet'
   ]
 };

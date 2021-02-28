@@ -3,12 +3,14 @@ import { graphql, Link } from 'gatsby';
 import { AiOutlineClockCircle, AiOutlineCalendar } from 'react-icons/ai';
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
+import Seo from '../components/Seo';
 
 const Home = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout>
+      <Seo title="Home" />
       <Bio />
       <div className="my-12">
         {posts.map((post) => (

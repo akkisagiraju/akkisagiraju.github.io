@@ -2,13 +2,15 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { AiOutlineClockCircle, AiOutlineCalendar } from 'react-icons/ai';
 import Layout from '../components/Layout';
+import Seo from '../components/Seo';
 
 const Post = ({ data }) => {
   const blogPost = data.markdownRemark;
   const { previous, next } = data;
-  
+
   return (
     <Layout>
+      <Seo title={blogPost.frontmatter.title} description={blogPost.frontmatter.description || blogPost.excerpt} />
       <div className="mb-8 flex justify-between items-center">
         <Link to="/" className="font-medium text-blue-800 dark:text-blue-500 text-xl">
           Home
@@ -46,12 +48,12 @@ const Post = ({ data }) => {
             )}
           </li>
           <li>
-              {next && (
-                <Link to={next.fields.slug} className="font-medium text-blue-800 dark:text-blue-500 text-xl" rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
+            {next && (
+              <Link to={next.fields.slug} className="font-medium text-blue-800 dark:text-blue-500 text-xl" rel="next">
+                {next.frontmatter.title} →
+              </Link>
+            )}
+          </li>
         </ul>
       </nav>
     </Layout>
@@ -64,6 +66,7 @@ export const pageQuery = graphql`
   query($slug: String!, $previousPostId: String, $nextPostId: String) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt(pruneLength: 160)
       frontmatter {
         title
         date
