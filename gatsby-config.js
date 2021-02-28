@@ -45,13 +45,13 @@ module.exports = {
         ]
       }
     },
-    // {
-    //   resolve: 'gatsby-plugin-robots-txt',
-    //   options: {
-    //     host: 'https://www.akhilsagiraju.com',
-    //     policy: [{ userAgent: '*', disallow: ['/'] }]
-    //   }
-    // },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://akhilsagiraju.com',
+        policy: [{ userAgent: '*', disallow: ['/'] }]
+      }
+    },
     'gatsby-plugin-postcss',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
