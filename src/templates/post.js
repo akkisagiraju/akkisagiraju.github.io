@@ -18,7 +18,7 @@ const Post = ({ data }) => {
         </Link>
         <a
           href="mailto:svakhilvarma@gmail.com"
-          className="inline-block font-medium bg-blue-800 dark:bg-blue-600 rounded-lg text-white px-4 py-2 text-base shadow lg:text-lg"
+          className="inline-block font-medium bg-blue-800 dark:bg-blue-600 rounded-lg text-white px-4 py-2 text-base shadow"
         >
           Contact
         </a>

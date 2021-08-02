@@ -11,7 +11,7 @@ const Home = ({ data }) => {
   if (!posts.length) {
     return (
       <Layout>
-        <Seo title="Home" />
+        <Seo title="Akhil Sagiraju" />
         <Bio />
         <div className="my-12">
           <p className="text-lg text-center text-gray-500 dark:text-gray-400">No blog posts found</p>
@@ -22,7 +22,7 @@ const Home = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo title="Akhil Sagiraju" />
       <Bio />
       <div className="my-12">
         {posts.map((post) => (
