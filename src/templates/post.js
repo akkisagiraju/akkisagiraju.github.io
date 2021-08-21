@@ -23,7 +23,7 @@ const Post = ({ data }) => {
           Contact
         </a>
       </div>
-      <h1 className="text-3xl font-bold dark:text-gray-100 my-4 lg:text-4xl">{blogPost.frontmatter.title}</h1>
+      <h1 className="text-3xl font-bold dark:text-gray-100 mt-4 mb-4 lg:text-4xl">{blogPost.frontmatter.title}</h1>
       <div className="flex justify-between items-center mt-2 lg:justify-start">
         <p className="flex items-center text-sm text-gray-500 dark:text-gray-400 lg:mr-20 lg:text-base">
           {' '}
