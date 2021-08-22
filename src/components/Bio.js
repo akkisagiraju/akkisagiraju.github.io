@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { GrMail, GrGithub, GrTwitter } from 'react-icons/gr';
 import Image from 'gatsby-image';
 
 const Bio = () => {
@@ -27,12 +28,26 @@ const Bio = () => {
         <p className="text-gray-800 dark:text-gray-300 text-base mx-auto lg:w-3/5">
           Personal blog by Akhil, a front-end developer and a tech enthusiast based in India.
         </p>
-        <a
+        <div className="flex justify-center items-center mt-6">
+          <a className="mx-2" href="mailto:svakhilvarma@gmail.com">
+            {' '}
+            <GrMail className="w-5 h-5 text-blue-800" />{' '}
+          </a>
+          <a className="mx-2" href="https://github.com/akkisagiraju" target="_blank" rel="noopener noreferrer">
+            {' '}
+            <GrGithub className="w-5 h-5 text-blue-800" />{' '}
+          </a>
+          <a className="mx-2" href="https://twitter.com/akhilalltheway" target="_blank" rel="noopener noreferrer">
+            {' '}
+            <GrTwitter className="w-5 h-5 text-blue-800" />{' '}
+          </a>
+        </div>
+        {/* <a
           href="mailto:svakhilvarma@gmail.com"
           className="inline-block font-medium bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 rounded-lg text-white px-4 py-2 mt-4 text-base shadow"
         >
           Contact
-        </a>
+        </a> */}
       </div>
     </div>
   );
