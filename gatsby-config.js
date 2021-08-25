@@ -54,6 +54,15 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'G-4F3ZRD059B',
+        anonymize: true,
+        respectDNT: true,
+        enableWebVitalsTracking: true
+      }
+    },
     'gatsby-plugin-postcss',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
