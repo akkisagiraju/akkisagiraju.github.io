@@ -26,7 +26,7 @@ const Bio = () => {
       <div className="text-center">
         <h2 className="font-bold text-blue-800 dark:text-blue-500 text-2xl mt-4 mb-2 lg:text-3xl">Akhil Sagiraju</h2>
         <p className="text-gray-800 dark:text-gray-300 text-base mx-auto lg:w-3/5">
-          Personal blog by Akhil, a front-end developer and a tech enthusiast based in India.
+          Personal blog by Akhil, a front-end developer based in India.
         </p>
         <div className="flex justify-center items-center mt-6">
           <a className="mx-2" href="mailto:svakhilvarma@gmail.com">
