@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby';
 import { AiOutlineClockCircle, AiOutlineCalendar } from 'react-icons/ai';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
-// import PostFooter from '../components/PostFooter';
+import PostFooter from '../components/PostFooter';
 
 const Post = ({ data }) => {
   const blogPost = data.markdownRemark;
@@ -14,7 +14,7 @@ const Post = ({ data }) => {
       <Seo title={blogPost.frontmatter.title} description={blogPost.frontmatter.description || blogPost.excerpt} />
       <div className="mb-8 flex justify-between items-center">
         <Link to="/" className="font-medium text-blue-800 dark:text-blue-500 text-xl">
-          Home
+          Akhil Sagiraju
         </Link>
         <a
           href="mailto:svakhilvarma@gmail.com"
@@ -36,7 +36,7 @@ const Post = ({ data }) => {
       </div>
       <div className="my-8" dangerouslySetInnerHTML={{ __html: blogPost.html }}></div>
       <nav className="pt-8 border-t-2 border-gray-200 dark:border-gray-600">
-        {/* <PostFooter /> */}
+        <PostFooter />
         <ul className="flex flex-wrap justify-between items-center list-none">
           <li>
             {previous && (
