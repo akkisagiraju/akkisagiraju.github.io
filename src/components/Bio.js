@@ -11,7 +11,7 @@ const Bio = () => {
           Personal blog by Akhil, a front-end engineer based in India.
         </p>
         <div className="flex justify-center items-center mt-6">
-          <a className="mx-2" href="mailto:svakhilvarma@gmail.com">
+          <a className="mx-2" href="mailto:aksass@protonmail.com">
             {' '}
             <GrMail className="w-5 h-5 text-blue-800" />{' '}
           </a>

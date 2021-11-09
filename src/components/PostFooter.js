@@ -5,7 +5,7 @@ const PostFooter = () => {
     <div className="flex items-center">
       <p className="text-sm text-gray-800 dark:text-gray-300">
         Written by{' '}
-        <a href="www.twitter.com/akhilalltheway" target="_blank" rel="noreferrer noopener">
+        <a href="https://www.twitter.com/akhilalltheway" target="_blank" rel="noreferrer noopener">
           Akhil
         </a>
         , a front-end engineer based in India.
