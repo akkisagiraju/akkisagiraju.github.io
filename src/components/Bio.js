@@ -1,27 +1,20 @@
 import React from 'react';
-import { GrMail, GrGithub, GrTwitter } from 'react-icons/gr';
 
 const Bio = () => {
 
   return (
-    <div className="flex flex-col items-center justify-between pb-6 border-b-2 border-gray-500 lg:pb-6">
+    <div className="flex flex-col items-center justify-between pb-6 border-b-2 border-gray-500">
       <div className="text-center">
         <h2 className="font-bold text-blue-800 dark:text-blue-500 text-2xl mt-4 mb-2 lg:text-3xl">Akhil Sagiraju</h2>
         <p className="text-gray-800 dark:text-gray-300 text-base mx-auto lg:w-3/5">
           Personal blog by Akhil, a front-end engineer based in India.
         </p>
-        <div className="flex justify-center items-center mt-6">
-          <a className="mx-2" href="mailto:aksass@protonmail.com">
-            {' '}
-            <GrMail className="w-5 h-5 text-blue-800" />{' '}
+        <div className="flex justify-center mt-2">
+          <a className="mx-2 text-sm underline text-blue-800" href="mailto:aksass@protonmail.com">
+            E-mail
           </a>
-          <a className="mx-2" href="https://github.com/akkisagiraju" target="_blank" rel="noopener noreferrer">
-            {' '}
-            <GrGithub className="w-5 h-5 text-blue-800" />{' '}
-          </a>
-          <a className="mx-2" href="https://twitter.com/akhilalltheway" target="_blank" rel="noopener noreferrer">
-            {' '}
-            <GrTwitter className="w-5 h-5 text-blue-800" />{' '}
+          <a className="mx-2 text-sm underline text-blue-800" href="https://github.com/akkisagiraju" target="_blank" rel="noopener noreferrer">
+            GitHub
           </a>
         </div>
         {/* <a

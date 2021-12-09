@@ -13,7 +13,7 @@ const Home = ({ data }) => {
       <Layout>
         <Seo title="Akhil Sagiraju" />
         <Bio />
-        <div className="my-12">
+        <div className="my-8">
           <p className="text-lg text-center text-gray-500 dark:text-gray-400">No blog posts found</p>
         </div>
       </Layout>
@@ -24,9 +24,9 @@ const Home = ({ data }) => {
     <Layout>
       <Seo title="Akhil Sagiraju" />
       <Bio />
-      <div className="my-12">
+      <div className="my-8">
         {posts.map((post) => (
-          <div key={post.id} className="my-8 my-12">
+          <div key={post.id} className="my-8">
             <Link to={post.fields.slug} className="text-xl text-gray-900 dark:text-gray-100 font-bold lg:text-2xl">
               {post.frontmatter.title}
             </Link>
