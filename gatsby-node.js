@@ -17,7 +17,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
   const blogs = await graphql(`
     {
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }, limit: 1000) {
+      allMarkdownRemark(
+        filter: { fields: { slug: { regex: "/blogs/" } } }
+        sort: { fields: [frontmatter___date], order: ASC }
+        limit: 1000
+      ) {
         nodes {
           id
           fields {
