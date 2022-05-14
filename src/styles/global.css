@@ -12,8 +12,8 @@ body {
 .gatsby-highlight {
   background-color: #e5e5e5;
   border-radius: 0.3em;
-  margin: 0.5em 0;
-  padding: 1em;
+  margin: 0.5rem 0;
+  padding: 1rem;
   overflow: auto;
 }
 
@@ -23,4 +23,18 @@ blockquote {
 
 p a {
   @apply text-blue-800 underline;
+}
+
+.post-body ol,
+.post-body ul {
+  padding-left: 1rem;
+  @apply mb-8;
+}
+
+.post-body ol {
+  list-style: decimal;
+}
+
+.post-body ul {
+  list-style: circle;
 }

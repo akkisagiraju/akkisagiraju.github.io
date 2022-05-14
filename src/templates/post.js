@@ -34,29 +34,31 @@ const Post = ({ data }) => {
           {blogPost.timeToRead} min read
         </p>
       </div>
-      <div className="my-8" dangerouslySetInnerHTML={{ __html: blogPost.html }}></div>
+      <div className="my-8 post-body" dangerouslySetInnerHTML={{ __html: blogPost.html }}></div>
       <nav className="pt-8 border-t-2 border-gray-200 dark:border-gray-600">
         <PostFooter />
-        <ul className="flex flex-wrap justify-between items-center list-none mt-8">
-          <li>
-            {previous && (
-              <Link
-                to={previous.fields.slug}
-                className="font-medium text-blue-800 dark:text-blue-500 text-xl"
-                rel="prev"
-              >
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} className="font-medium text-blue-800 dark:text-blue-500 text-xl" rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
+        {previous || next ? (
+          <ul className="flex flex-wrap justify-between items-center list-none mt-8">
+            {next ? (
+              <li className="mb-2">
+                <Link to={next.fields.slug} className="font-medium text-blue-800 dark:text-blue-500 text-xl" rel="next">
+                  ← {next.frontmatter.title}
+                </Link>
+              </li>
+            ) : null}
+            {previous ? (
+              <li className="mt-2">
+                <Link
+                  to={previous.fields.slug}
+                  className="font-medium text-blue-800 dark:text-blue-500 text-xl mb-2"
+                  rel="prev"
+                >
+                  {previous.frontmatter.title} →
+                </Link>
+              </li>
+            ) : null}
+          </ul>
+        ) : null}
       </nav>
     </Layout>
   );
