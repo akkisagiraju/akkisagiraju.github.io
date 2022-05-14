@@ -21,6 +21,6 @@ LineageOS was my obvious choice because I was a CyanogenMod user back in the day
 
 ![screenshots](./screenshots.png)
 
-The installation process wasn't as simple as I thought it would be. But it was was not hard either. I had to unlock the bootloader, install a custom recovery (I went with TWRP), install the latest [LineageOS 19 build](https://download.lineageos.org/enchilada), a [bare minimum Gapps package](https://sourceforge.net/projects/nikgapps/files/Releases/NikGapps-SL/01-May-2022/) for Android 12L, and finally [Magisk](https://github.com/topjohnwu/Magisk) to pass SafetyNet test and to make my banking apps work by hiding root access.
+The installation process wasn't as simple as I thought it would be. But it was not hard either. I had to unlock the bootloader, install a custom recovery (I went with TWRP), install the latest [LineageOS 19 build](https://download.lineageos.org/enchilada), a [bare minimum Gapps package](https://sourceforge.net/projects/nikgapps/files/Releases/NikGapps-SL/01-May-2022/) for Android 12L, and finally [Magisk](https://github.com/topjohnwu/Magisk) to pass SafetyNet test and to make my banking apps work by hiding root access.
 
 That's it. My phone feels and functions as fast as the day I bought it and I do not have to think about buying a new phone anytime soon.
