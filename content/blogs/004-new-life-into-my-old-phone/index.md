@@ -3,7 +3,7 @@ title: Breathing new life into my four year old phone
 date: 2022-05-14
 ---
 
-Earlier this year, I felt I needed to upgrade my phone (OnePlus 6) mainly due to its degraded battery and the performance hit it caused. I bought it in 2018 and it had served me well in all those years.
+Earlier this year, I felt I needed to upgrade my phone (OnePlus 6) mainly due to its degraded battery and the performance hit that caused. I bought it in 2018 and it had served me well in all those years.
 
 I started looking for options. My main requirement was clean software experience. That eliminated a lot of choices in the Android world and iOS was my last option. But I almost pulled the trigger on an iPhone 13 before I realized my current phone was still fast enough to do almost everything I need it for, which are:
 
