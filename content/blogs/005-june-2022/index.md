@@ -11,6 +11,6 @@ I left home after a long time since the pandemic began, for a two week stay in B
 
 It was my first time in Bangalore. I got to meet folks from work and spent the first week working in-person at the office. Despite Bangalore's infamous traffic woes, my daily commute hadn't been a problem as I stayed at a place close to the office. But the hightlight of the trip was spending time with a dear one of mine.
 
-I also started enjoying working with Django. I have been mostly a frontend engineer so far and writing Python code is more pleasant than I thought.
+I also started enjoying working with Django. I have mostly been a frontend engineer so far and writing Python code is more pleasant than I thought.
 
 It was in this June I had gone out the most in the last couple of years both with friends back in my hometown and in Bangalore. I am glad for that.
