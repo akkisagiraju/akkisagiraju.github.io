@@ -13,4 +13,4 @@ It was my first time in Bangalore. I got to meet folks from work and spent the f
 
 I also started enjoying working with Django. I have mostly been a frontend engineer so far and writing Python code is more pleasant than I thought.
 
-It was in this June I had gone out the most in the last couple of years both with friends back in my hometown and in Bangalore. I am glad for that.
+It was in this June I had gone out the most this year both with friends back in my hometown and in Bangalore. I am glad for that.
