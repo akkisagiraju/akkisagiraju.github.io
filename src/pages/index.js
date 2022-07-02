@@ -26,8 +26,8 @@ const Home = ({ data }) => {
       <Bio />
       <div className="my-8">
         {posts.map((post) => (
-          <div key={post.id} className="my-8">
-            <Link to={post.fields.slug} className="text-xl text-gray-900 dark:text-gray-100 font-bold lg:text-2xl">
+          <div key={post.id} className="my-6">
+            <Link to={post.fields.slug} className="text-xl text-gray-900 dark:text-gray-100 font-bold">
               {post.frontmatter.title}
             </Link>
             <div className="flex justify-between items-center mt-2 lg:justify-start">

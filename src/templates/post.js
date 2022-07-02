@@ -40,14 +40,14 @@ const Post = ({ data }) => {
         {previous || next ? (
           <ul className="flex flex-wrap justify-between items-center list-none mt-8">
             {next ? (
-              <li className="mb-2">
+              <li className="mb-2 lg:mb-0">
                 <Link to={next.fields.slug} className="font-medium text-blue-800 dark:text-blue-500 text-xl" rel="next">
                   ← {next.frontmatter.title}
                 </Link>
               </li>
             ) : null}
             {previous ? (
-              <li className="mt-2">
+              <li className="mt-2 lg:mt-0">
                 <Link
                   to={previous.fields.slug}
                   className="font-medium text-blue-800 dark:text-blue-500 text-xl mb-2"
