@@ -48,6 +48,12 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
+    {
+      resolve: 'gatsby-plugin-plausible',
+      options: {
+        domain: 'akhilsagiraju.com',
+      },
+    },
     'gatsby-plugin-postcss',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
