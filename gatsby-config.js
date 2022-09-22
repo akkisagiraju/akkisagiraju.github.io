@@ -52,6 +52,7 @@ module.exports = {
       resolve: 'gatsby-plugin-plausible',
       options: {
         domain: 'akhilsagiraju.com',
+        customDomain: "https://tics.akhilsagiraju.com"
       },
     },
     'gatsby-plugin-postcss',
