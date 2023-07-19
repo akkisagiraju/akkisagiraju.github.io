@@ -6,7 +6,7 @@ import Seo from '../components/Seo';
 const Uses = () => {
   return (
     <Layout>
-      <Seo title="Akhil Sagiraju - Uses" />
+      <Seo title="Uses" />
       <Bio />
       <div className="my-8">
         <h1 className="text-2xl font-bold dark:text-gray-100 mt-4 mb-4 lg:text-3xl">Uses</h1>
