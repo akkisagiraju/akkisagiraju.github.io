@@ -36,7 +36,7 @@ const Uses = () => {
 
         <h3 className="text-lg font-bold mb-2">Mobile devices</h3>
         <ul className="list-disc list-inside mb-4">
-          <li>OnePlus 9 (8/128 GB)</li>
+          <li>OnePlus 11R (8/128 GB)</li>
           <li>Kindle Paperwhite (10th gen)</li>
         </ul>
 
@@ -52,8 +52,8 @@ const Uses = () => {
           <li>Sony WH-1000XM4</li>
           <li>AKG K361 studio monitors</li>
           <li>Audio Technica M20x studio monitors</li>
-          <li>Blon B01 IEMs</li>
           <li>KZ ZSN IEMs</li>
+          <li>Truthear - HOLA</li>
           <li>Edifier X3 TWS</li>
           <li>Fiio M3K Audio Player/DAC</li>
         </ul>
@@ -69,9 +69,9 @@ const Uses = () => {
 
         <h3 className="text-lg font-bold mb-2">OS</h3>
         <ul className="list-disc list-inside mb-4">
-          <li>openSUSE Tumbleweed (primary and occasional gaming)</li>
+          <li>Fedora 38 (primary)</li>
           <li>Windows 11 (gaming)</li>
-          <li>macOS Monterey (work)</li>
+          <li>macOS Ventura (work)</li>
         </ul>
 
         <h3 className="text-lg font-bold mb-2">Applications</h3>
