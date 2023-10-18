@@ -69,9 +69,9 @@ const Uses = () => {
 
         <h3 className="text-lg font-bold mb-2">OS</h3>
         <ul className="list-disc list-inside mb-4">
-          <li>Fedora 38 (primary)</li>
+          <li>openSUSE Tumbleweed (primary)</li>
           <li>Windows 11 (gaming)</li>
-          <li>macOS Ventura (work)</li>
+          <li>macOS Sonoma (work)</li>
         </ul>
 
         <h3 className="text-lg font-bold mb-2">Applications</h3>
