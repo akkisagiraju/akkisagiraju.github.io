@@ -119,12 +119,6 @@ module.exports = {
         customDomain: "tics.akhilsagiraju.com"
       },
     },
-    {
-			resolve: '@highlight-run/gatsby-plugin-highlight',
-			options: {
-				orgID: '5g5n5lgn', // Get your project ID from https://app.highlight.io/setup
-			},
-		},
     'gatsby-plugin-postcss',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
