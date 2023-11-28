@@ -15,13 +15,13 @@ Thankfully, the Telecom Regulatory Authority of India offers a DND (Do Not Distu
 But as soon as RCS is enabled (which is now the default), you will magically start receiving a lot of spam messages with rich text and link previews.
 
 <div style="display: flex; justify-content: space-around; margin-bottom: 10px;">
-    <img src="1.jpeg" alt="spam-message-1" style="width: 45%;">
-    <img src="2.jpeg" alt="spam-message-2" style="width: 45%;">
+    <img class="no-mark" src="1.jpeg" alt="spam-message-1" style="width: 45%;">
+    <img class="no-mark" src="2.jpeg" alt="spam-message-2" style="width: 45%;">
 </div>
 
 Google conveniently benefits from this, as the DND app seems unable to detect these rich-format spam messages, making them impossible to report.
 <div style="display: flex; justify-content: space-around; margin-bottom: 10px;">
-    <img src="3.jpeg" alt="dnd-screenshot" style="width: 50%;"/>
+    <img class="no-mark" src="3.jpeg" alt="dnd-screenshot" style="width: 50%;"/>
 </div>
 
 So, if you're using Google Messages on Android in India, I recommend disabling RCS to avoid this nuisance.
