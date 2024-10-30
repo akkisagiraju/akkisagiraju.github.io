@@ -36,7 +36,7 @@ const Uses = () => {
 
         <h3 className="text-lg font-bold mb-2">Mobile devices</h3>
         <ul className="list-disc list-inside mb-4">
-          <li>OnePlus 11R (8/128 GB)</li>
+          <li>iPhone 15</li>
           <li>Kindle Paperwhite (10th gen)</li>
         </ul>
 
@@ -50,11 +50,9 @@ const Uses = () => {
         <ul className="list-disc list-inside mb-4">
           <li>Edifier R1280DB bookshelf speakers/monitors</li>
           <li>Sony WH-1000XM4</li>
+          <li>AirPods 4 ANC</li>
           <li>AKG K361 studio monitors</li>
           <li>Audio Technica M20x studio monitors</li>
-          <li>KZ ZSN IEMs</li>
-          <li>Truthear - HOLA</li>
-          <li>Edifier X3 TWS</li>
           <li>Fiio M3K Audio Player/DAC</li>
         </ul>
 
@@ -62,7 +60,7 @@ const Uses = () => {
         <ul className="list-disc list-inside mb-4">
           <li>Razer Viper ambidextrous gaming mouse</li>
           <li>TVS Gold Keyboard (blue switches)</li>
-          <li>Canon EOS 1100D DSLR</li>
+          <li>GoPro Hero 10</li>
         </ul>
 
         <h2 className="text-xl font-bold mb-2">Software</h2>
