@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: '/',
   siteMetadata: {
     title: 'Akhil Sagiraju',
-    description: 'Personal blog by Akhil, a web software developer and a tech enthusiast based in India.',
+    description: 'Personal blog by Akhil, a software product engineer based in India.',
     siteUrl: 'https://akhilsagiraju.com'
   },
   plugins: [

@@ -7,7 +7,7 @@ const Bio = () => {
       <div className="text-center">
         <h2 className="font-bold text-blue-800 dark:text-blue-500 text-2xl mt-4 mb-2 lg:text-3xl">Akhil Sagiraju</h2>
         <p className="text-gray-800 dark:text-gray-300 text-base mx-auto">
-          A web software engineer based in India.
+          A software product engineer based in India.
         </p>
         <div className="flex justify-center mt-4">
           <Link to="/" className="mx-2 text-sm text-blue-600 hover:text-blue-800">
