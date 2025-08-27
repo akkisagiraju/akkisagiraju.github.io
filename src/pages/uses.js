@@ -16,7 +16,7 @@ const Uses = () => {
 
         <h2 className="text-xl font-bold mb-2">Hardware</h2>
 
-        <h3 className="text-lg font-bold mb-2">Primary machine</h3>
+        <h3 className="text-lg font-bold mb-2">Personal machine</h3>
         <ul className="list-disc list-inside mb-4">
           <li>CPU: AMD Ryzen 5 3600</li>
           <li>Motherboard: MSI B450 Tomahawk Max</li>
@@ -26,12 +26,11 @@ const Uses = () => {
         </ul>
 
         <h3 className="text-lg font-bold mb-2">Work machine</h3>
-        <p className="mb-4">Macbook Air (M1/16GB/256GB)</p>
+        <p className="mb-4">Macbook Pro M4 Pro (2024)</p>
 
         <h3 className="text-lg font-bold mb-2">Desktop monitors</h3>
         <ol className="list-decimal list-inside mb-4">
           <li>LG 32GK650F 32 inch 1440p 144Hz VA monitor</li>
-          <li>BenQ GL2480 24 inch 1080p 60Hz IPS monitor</li>
         </ol>
 
         <h3 className="text-lg font-bold mb-2">Mobile devices</h3>
@@ -52,14 +51,11 @@ const Uses = () => {
           <li>Sony WH-1000XM4</li>
           <li>AirPods 4 ANC</li>
           <li>AKG K361 studio monitors</li>
-          <li>Audio Technica M20x studio monitors</li>
           <li>Fiio M3K Audio Player/DAC</li>
         </ul>
 
         <h3 className="text-lg font-bold mb-2">Accessories</h3>
         <ul className="list-disc list-inside mb-4">
-          <li>Razer Viper ambidextrous gaming mouse</li>
-          <li>TVS Gold Keyboard (blue switches)</li>
           <li>GoPro Hero 10</li>
         </ul>
 
@@ -67,9 +63,9 @@ const Uses = () => {
 
         <h3 className="text-lg font-bold mb-2">OS</h3>
         <ul className="list-disc list-inside mb-4">
-          <li>openSUSE Tumbleweed (primary)</li>
+          <li>openSUSE Tumbleweed (personal)</li>
           <li>Windows 11 (gaming)</li>
-          <li>macOS Sonoma (work)</li>
+          <li>macOS Sequoia (work)</li>
         </ul>
 
         <h3 className="text-lg font-bold mb-2">Applications</h3>
@@ -77,7 +73,7 @@ const Uses = () => {
           <li>Web browser: Firefox</li>
           <li>Text editor: Neovim/VSCodium</li>
           <li>Shell: ZSH (oh-my-zsh)</li>
-          <li>Music: Spotify</li>
+          <li>Music: Apple Music</li>
           <li>Notes/Knowledge Base/Day Planner: Obsidian</li>
           <li>Email: ProtonMail</li>
           <li>VPN: ProtonVPN</li>
